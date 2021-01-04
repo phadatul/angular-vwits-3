@@ -8,12 +8,14 @@ import { Component, VERSION } from "@angular/core";
 export class AppComponent {
   mydata = "abcd ";
   myname = "";
+  valUser = false;
 
   hello() {
     this.mydata = this.myname;
   }
 
   formHello(data) {
+    this.valUser=true;
     console.log(data.txtusername + " " + data.txtpassword);
   }
 }

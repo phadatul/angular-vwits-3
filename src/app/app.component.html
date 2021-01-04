@@ -9,6 +9,7 @@ THIS IS DATA BINDING : {{myname}}
 <h2>Forms</h2>
 <form #myform="ngForm" (ngSubmit)="formHello(myform.value)">
   <input type="text" name="txtusername" ngModel /><br />
+  <p *ngIf="valUser">This field is mandatory</p>
   <input type="password" name="txtpassword" ngModel /><br />
   <input type="submit" />
 </form>
