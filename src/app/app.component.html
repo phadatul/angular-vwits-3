@@ -1,4 +1,14 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h2>Two way data binding</h2>
+<p>Value of mydata variable :{{mydata}}</p>
+<input type="text" [(ngModel)]="myname" />
+<br />
+<button (click)="hello()">Click</button>
+<br />
+THIS IS DATA BINDING : {{myname}}
+
+<h2>Forms</h2>
+<form #myform="ngForm" (ngSubmit)="formHello(myform.value)">
+  <input type="text" name="txtusername" ngModel /><br />
+  <input type="password" name="txtpassword" ngModel /><br />
+  <input type="submit" />
+</form>

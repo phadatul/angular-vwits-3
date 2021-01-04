@@ -1,10 +1,19 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, VERSION } from "@angular/core";
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  selector: "my-app",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+export class AppComponent {
+  mydata = "abcd ";
+  myname = "";
+
+  hello() {
+    this.mydata = this.myname;
+  }
+
+  formHello(data) {
+    console.log(data.txtusername + " " + data.txtpassword);
+  }
 }
